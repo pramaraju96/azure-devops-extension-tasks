@@ -161,19 +161,19 @@ stages:
             name: 'publishProd'
             inputs:
               connectTo: 'VsTeam'
-              connectedServiceName: 'marketplaceServiceConnection'
+              connectedServiceName: 'VS Marketplace service connection'
               fileType: 'vsix'
               vsixFile: '$(Pipeline.Workspace)/vsix/vsts-developer-tools-build-tasks.vsix'
               publisherId: 'ms-devlabs'
               extensionId: 'vsts-developer-tools-build-tasks'
               updateTasksVersion: false
               extensionVisibility: 'public'
-              noWaitValidation:  true
+              noWaitValidation: true
           
           - task: IsAzureDevOpsExtensionValid@4
             inputs:
               connectTo: 'VsTeam'
-              connectedServiceName: 'marketplaceServiceConnection'
+              connectedServiceName: 'VS Marketplace service connection'
               method: 'vsix'
               vsixFile: '$(publishProd.Extension.OutputPath)'
 
