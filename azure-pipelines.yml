@@ -188,7 +188,7 @@ stages:
           - task: GitHubRelease@1
             inputs:
               gitHubConnection: 'microsoft/azure-devops-extension-tasks'
-              repositoryName: '$(Build.Repository.Name)'
+              repositoryName: 'pramaraju96/azure-devops-extension-tasks'
               action: 'create'
               target: '$(Build.SourceVersion)'
               tagSource: 'userSpecifiedTag'
